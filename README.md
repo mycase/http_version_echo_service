@@ -6,14 +6,14 @@ This project runs an HTTP server that tells you what HTTP version you used to ma
 
 ```
 yarn install
-PORT=3000 yarn start
+PORT=3000 HOST=localhost yarn start
 ```
 
 ```
-$ curl -v http://localhost:3000/version
-*   Trying ::1...
+$ curl -v4 http://localhost:3000/version
+*   Trying 127.0.0.1...
 * TCP_NODELAY set
-* Connected to localhost (::1) port 3000 (#0)
+* Connected to localhost (127.0.0.1) port 3000 (#0)
 > GET /version HTTP/1.1
 > Host: localhost:3000
 > User-Agent: curl/7.54.0
@@ -21,7 +21,7 @@ $ curl -v http://localhost:3000/version
 >
 < HTTP/1.1 200 OK
 < Content-Type: application/json
-< Date: Fri, 30 Mar 2018 01:01:41 GMT
+< Date: Tue, 03 Apr 2018 23:50:27 GMT
 < Connection: keep-alive
 < Content-Length: 21
 <
@@ -30,10 +30,10 @@ $ curl -v http://localhost:3000/version
 ```
 
 ```
-$ curl -v --http1.0 http://localhost:3000/version
-*   Trying ::1...
+$ curl -v4 --http1.0 http://localhost:3000/version
+*   Trying 127.0.0.1...
 * TCP_NODELAY set
-* Connected to localhost (::1) port 3000 (#0)
+* Connected to localhost (127.0.0.1) port 3000 (#0)
 > GET /version HTTP/1.0
 > Host: localhost:3000
 > User-Agent: curl/7.54.0
@@ -41,7 +41,7 @@ $ curl -v --http1.0 http://localhost:3000/version
 >
 < HTTP/1.1 200 OK
 < Content-Type: application/json
-< Date: Fri, 30 Mar 2018 01:02:07 GMT
+< Date: Tue, 03 Apr 2018 23:50:50 GMT
 < Connection: close
 <
 * Closing connection 0

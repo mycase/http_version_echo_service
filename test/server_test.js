@@ -8,7 +8,7 @@ describe('HTTP version echo server', function () {
   before(function () {
     this.host = 'localhost';
     this.port = 8080;
-    this.server = createServer(this.port);
+    this.server = createServer(this.port, this.host);
     this.path = '/version';
   });
 
