@@ -1,5 +1,7 @@
 # HTTP Version Echo Service
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/appfolio/http_version_echo_service.svg)](https://greenkeeper.io/)
+
 This project runs an HTTP server that tells you what HTTP version you used to make your request.
 
 ## Usage
